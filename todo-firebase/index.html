@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>할 일</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <h1 class="title">할 일</h1>
+        <p class="subtitle">추가 · 수정 · 삭제</p>
+      </header>
+
+      <p id="db-status" class="db-status" role="status" hidden></p>
+
+      <form class="add-form" id="add-form" autocomplete="off">
+        <label class="sr-only" for="new-todo">새 할 일</label>
+        <input
+          type="text"
+          id="new-todo"
+          class="input"
+          placeholder="무엇을 하시겠어요?"
+          maxlength="200"
+          required
+        />
+        <button type="submit" class="btn btn-primary">추가</button>
+      </form>
+
+      <ul class="list" id="todo-list" aria-live="polite"></ul>
+
+      <p class="empty" id="empty-state" hidden>할 일이 없습니다. 위에서 추가해 보세요.</p>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
