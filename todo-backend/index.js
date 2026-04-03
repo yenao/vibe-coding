@@ -26,10 +26,10 @@ const server = http.createServer((req, res) => {
 
 async function main() {
   await mongoose.connect(MONGODB_URI);
-  console.log("몽고디비 연결 성공");
+  console.log("연결 성공");
 
   server.listen(PORT, () => {
-    console.log(`서버가 ${PORT}번 포트에서 실행 중입니다.`);
+    console.log(`Listening on http://localhost:${PORT}`);
   });
 }
 
